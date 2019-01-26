@@ -1,17 +1,18 @@
 package sda;
 
+import java.util.ArrayList;
+
 public class UserService {
 
-private User[] users = new User [5];
-private int count = 0;
+private ArrayList<User> ListaOsob = new ArrayList<>();
 
 public void addUser(User user){
-    users[count++] = user;
+   ListaOsob.add(user);
 }
 
 public void printAll(){
-    for(int i=0; i<users.length; i++){
-        System.out.println(users[i]);
+    for(User name: ListaOsob){
+        System.out.println(name);
     }
 }
 
