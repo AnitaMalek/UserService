@@ -1,5 +1,6 @@
 package sda;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -50,6 +51,15 @@ private Map<String, List<String>> dictionary = new HashMap<>();
             System.out.println("Nie ma czegos takiego");
         }
 
+    }
 
+    public List<String> search(String phrase) {
+        List<String> correctKeys = new ArrayList<>();
+        for(String key: dictionary.keySet()){
+            if (key.contains(phrase)){
+               correctKeys.add(key);
+            }
+        }
+        return correctKeys;
     }
 }
