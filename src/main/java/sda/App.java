@@ -1,12 +1,12 @@
 package sda;
 
-import java.util.ArrayList;
+import java.util.*;
 
 /**
  * Hello world!
  *
  */
-public class App {
+public class App{
     public static void main(String[] args) {
 
 //    UserService lista = new UserService();
@@ -31,10 +31,21 @@ public class App {
 //        for (int i: NumerOsoby){
 //            System.out.println(i);
 //        }
-UserService ekipka = new UserService();
-ekipka.addUser(new User("ela", "malysz", "e.malysz", "skoczek"));
-ekipka.printAll();
+//UserService ekipka = new UserService();
+//ekipka.addUser(new User("ela", "malysz", "e.malysz", "skoczek"));
+//ekipka.printAll();
 
+        Dictionary engDictionary = new Dictionary();
 
+        List<String> ballTranslations = new ArrayList<>();
+
+        ballTranslations.add("ball");
+        ballTranslations.add("ball1");
+        ballTranslations.add("ball2");
+
+        engDictionary.addTranslation("pilka", ballTranslations);
+        engDictionary.addTranslation("pies", Arrays.asList("dog"));
+
+        System.out.println(engDictionary.getTranslation("pilka"));
     }
 }
