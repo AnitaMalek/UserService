@@ -35,17 +35,35 @@ public class App{
 //ekipka.addUser(new User("ela", "malysz", "e.malysz", "skoczek"));
 //ekipka.printAll();
 
-        Dictionary engDictionary = new Dictionary();
+//        Dictionary engDictionary = new Dictionary();
+//
+//        List<String> ballTranslations = new ArrayList<>();
+//
+//        ballTranslations.add("ball");
+//        ballTranslations.add("ball1");
+//        ballTranslations.add("ball2");
+//
+//        engDictionary.addTranslation("pilka", ballTranslations);
+//        engDictionary.addTranslation("pies", Arrays.asList("dog"));
+//
+//        System.out.println(engDictionary.getTranslation("pilka"));
+//
+//        System.out.println("Search l:" + engDictionary.search("l"));
 
-        List<String> ballTranslations = new ArrayList<>();
 
-        ballTranslations.add("ball");
-        ballTranslations.add("ball1");
-        ballTranslations.add("ball2");
 
-        engDictionary.addTranslation("pilka", ballTranslations);
-        engDictionary.addTranslation("pies", Arrays.asList("dog"));
 
-        System.out.println(engDictionary.getTranslation("pilka"));
+        PersonService service = new PersonService();
+
+       service.addPerson(new Person("Anna", "Klocek", "1999-09-09"));
+       service.addPerson(new Person("Asia", "Belka", "1998-07-06"));
+       service.addPerson(new Person("Ala", "Kot", "1900-01-02"));
+
+        System.out.println(service.wyswietl());
+
+        service.printAll();
+        service.remove("Asia");
+        service.printAll();
+
     }
 }
